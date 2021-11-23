@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as st
+import pandas as pd
 
 header = st.beta_container()
 dataset = st.beta_container()
