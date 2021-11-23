@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-header = st.beta_container()
-dataset = st.beta_container()
-features = st.beta_container()
-model_training = st.beta_container()
+header = st.container()
+dataset = st.container()
+features = st.container()
+model_training = st.container()
 
 with header:
      st.title('welcome to my page')
