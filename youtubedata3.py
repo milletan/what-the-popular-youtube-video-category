@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import altair as alt
 
 header = st.container()
 dataset = st.container()
@@ -17,8 +18,15 @@ with dataset:
      st.write(youtube_data.head())
      
      st.subheader('Youtube video Category with most viewed times')
-     Chart_bar = pd.DataFrame(youtube_data)
-     st.bar_chart(Chart_bar, width=0.5, height=0, use_container_width=True)
+     data = pd.DataFrame(youtube_data)
+     'Category': ['how-to-do','cooking','music','fitness','vlog'],
+     'Viewtimes': ['1000000','20000000','100000000','4000000',3000000'],
+     })
+     st.write(data)
+     st.write(alt.Chart(data).mark_bar().encode(
+     x=alt.X('Category', sort=None),
+     y='Viewtimes',
+     ))
     
                                            
 with model_training:
