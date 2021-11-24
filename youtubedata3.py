@@ -18,7 +18,7 @@ with dataset:
      st.write(youtube_data.head())
      
      st.subheader('Youtube video Category with most viewed times')
-     data = pd.DataFrame({'Category': ['how-to-do','cooking','music','fitness','vlog'],'Viewtimes': ['10','20','15','40','30']})
+     data = pd.DataFrame({'Category': ['how-to-do','cooking','music','fitness','vlog'],'Viewtimes': ['1000','2000','15000','4000','3000']})
                    
      st.write(data)
      st.write(alt.Chart(data).mark_bar().encode(x=alt.X('Category', sort=None),y='Viewtimes',))
