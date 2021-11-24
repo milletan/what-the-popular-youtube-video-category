@@ -23,12 +23,8 @@ with dataset:
      'Viewtimes': ['1000000','20000000','100000000','4000000',3000000']
                    
      st.write(data)
-     st.write(alt.Chart(data).mark_bar().encode(
-     x=alt.X('Category', sort=None),
-     y='Viewtimes',
-     ))
-    
-                                           
+     st.write(alt.Chart(data).mark_bar().encode(x=alt.X('Category', sort=None),y='Viewtimes',))
+                                  
 with model_training:
     st.header('most popular')
     st.text('music')
