@@ -18,7 +18,6 @@ with dataset:
      
      st.subheader('Youtube video Category with most viewed times')
      Chart_bar = pd.DataFrame(youtube_data)
-     rename(columns={'Viewtimes': 'Category'})
      st.bar_chart(Chart_bar, width=0.5, height=0, use_container_width=True)
     
                                            
