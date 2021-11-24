@@ -15,7 +15,7 @@ with dataset:
      st.text('i created this dataset')
      
      youtube_data = pd.read_csv("data - Sheet1.csv")
-     st.write("data - Sheet1")
+     st.write("data - Sheet1.csv")
      
 with features:
      st.header('the features i created')
