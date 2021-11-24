@@ -17,7 +17,6 @@ with dataset:
      st.write(youtube_data.head())
      
      st.subheader('Youtube video Category with most viewed times')
-     Category_dist = pd.DataFrame(youtube_data['Category'].value_counts()).head(50)
      st.bar_chart(Youtube_data, width=0, height=0, use_container_width=True)
                                            
 with model_training:
