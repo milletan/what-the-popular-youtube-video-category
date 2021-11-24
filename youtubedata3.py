@@ -3,7 +3,6 @@ import pandas as pd
 
 header = st.container()
 dataset = st.container()
-features = st.container()
 model_training = st.container()
 
 with header:
@@ -20,11 +19,6 @@ with dataset:
      st.subheader('Youtube video category with most viewed times')
      category_dist = pd.DataFrame(youtube_data['Category'].value_counts()).head(50)
      st.bar_chart(category_dist)
-     
-with features:
-     st.header('the features i created')
-     
-     
      
 with model_training:
     st.header('most popular')
