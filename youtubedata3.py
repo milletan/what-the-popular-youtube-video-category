@@ -21,7 +21,7 @@ with dataset:
      data = pd.DataFrame({'Category': ['how-to-do','cooking','music','fitness','vlog'],'Viewtimes': ['1000','2000','15000','4000','3000']})
                    
      st.write(data)
-     st.write(alt.Chart(data).mark_bar().encode(x=alt.X('Category'),y='Viewtimes'))
+     st.write(alt.Chart(data).mark_bar().encode(x=alt.X('Category' sort=None),y='Viewtimes'))
                                   
 with model_training:
     st.header('most popular')
