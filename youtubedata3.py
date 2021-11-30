@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import matplotlib.pyplot as plt
 
 header = st.container()
 dataset = st.container()
@@ -19,7 +20,10 @@ with dataset:
      data = pd.DataFrame({'Category': ['how-to-do','cooking','music','fitness','vlog'],'Viewtimes': ['1000','2000','15000','4000','3000']})
                    
      st.write(data)
-     st.write(alt.Chart(data).mark_bar().encode(x=alt.X('Category', sort=None),y='Viewtimes'))
+     
+     fig, ax = plt.subplots()
+     ax.bar(data.Category,data.Viewtimes)
+     st.pyplot(fig)
                                   
 with model_training:
     st.header('most popular')
